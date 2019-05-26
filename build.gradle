@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'masterSpringMvc'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.1.5.RELEASE'
+	// https://mvnrepository.com/artifact/org.webjars/jquery
+	implementation group: 'org.webjars', name: 'jquery', version: '3.4.1'
+	// https://mvnrepository.com/artifact/org.webjars/materializecss
+	implementation group: 'org.webjars', name: 'materializecss', version: '1.0.0'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-social-twitter
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-social-twitter', version: '1.5.20.RELEASE'
+
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
